@@ -1,0 +1,3 @@
+[submodule "githooks"]
+	path = githooks
+	url = git@gitlab.renrenche.com:web/githooks.git

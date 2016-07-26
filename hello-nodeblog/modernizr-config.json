@@ -1,0 +1,13 @@
+{
+  "minify": false,
+  "classPrefix": "modernizr-",
+  "options": [
+    "setClasses"
+  ],
+  "feature-detects": [
+    "test/video",
+    "test/css/gradients",
+    "test/es5/array",
+    "test/es6/array"
+  ]
+}

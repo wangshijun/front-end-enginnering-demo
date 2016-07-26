@@ -1,0 +1,22 @@
+{
+  "name": "hello-requirejs",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "wangshijun2010 <wangshijun2010@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "^2.2.0",
+    "jquery": "^2.2.3"
+  }
+}

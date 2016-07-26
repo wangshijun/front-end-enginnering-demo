@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello AngularJS</title>
+</head>
+<body ng-app="HelloAngular">
+    <div ng-controller="HelloAngularController">
+        <h2>Data Binding</h2>
+        <label>Keyword: <input type="text" ng-model="keyword" /></label>
+        <p>Hello {{keyword}}</p>
+
+        <h2>Angular Loop</h2>
+        <ul>
+            <li ng-repeat="name in names | filter:keyword">
+                {{name | uppercase}}&nbsp;&nbsp;
+                <a ng-click="removeItem(name)">X</a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="angular.js"></script>
+
+    <script>
+    var app = angular.module('HelloAngular', []);
+
+    app.factory('NamesService', function () {
+        var names = [
+            'Wang Shijun',
+            'Wang Shikun',
+            'Wang Shilong',
+            'Wang Shihu',
+            'Wang Shiwen',
+            'Rao Huixia',
+            'Yan Wei',
+            'Ye Huijie',
+            'Jia Rui',
+            'Li Peng',
+            'Li Wei',
+            'Liu Jing',
+            'Zou Bin',
+        ];
+
+        return {
+            get: function () {
+                return names;
+            },
+
+            remove: function (name) {
+                names = names.filter(function (item) {
+                    return name !== item;
+                });
+            },
+        };
+    });
+
+    app.controller('HelloAngularController', function ($scope, NamesService) {
+        $scope.names = NamesService.get();
+
+        $scope.removeItem = function (item) {
+            NamesService.remove(item);
+            $scope.names = NamesService.get();
+        };
+
+        $scope.$watch('names', function () {
+            console.log(arguments);
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Zepto!</title>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <script type="text/javascript" charset="utf-8" src="zepto/dist/zepto.custome-touch.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(function () {
+            console.log('zepto: page.domready');
+
+            $('h1').on('tap', function (e) {
+                alert('tap' + JSON.stringify(e));
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Hello Zepto</h1>
+</body>
+</html>

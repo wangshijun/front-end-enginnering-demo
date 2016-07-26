@@ -1,0 +1,11 @@
+{
+  "name": "hello-npm-publish",
+  "version": "2.0.0",
+  "dependencies": {
+    "moment": {
+      "version": "2.12.0",
+      "from": "moment@>=2.12.0 <3.0.0",
+      "resolved": "http://registry.npm.taobao.org/moment/download/moment-2.12.0.tgz"
+    }
+  }
+}

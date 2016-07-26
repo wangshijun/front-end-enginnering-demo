@@ -1,0 +1,38 @@
+body, div {
+    padding:0;
+    margin: 0;
+}
+
+.wrapper {
+    width: 342px;
+    margin: 0 auto;
+}
+
+.wrapper .logo {
+    background: url(../images/logo.png) left top no-repeat;
+    width: 111px;
+    height: 51px;
+    margin: 20px 0 20px 115px;
+}
+
+.wrapper .body {
+    background: url(../images/bg.png) left top no-repeat;
+    height: 317px;
+}
+
+.wrapper .refresh {
+    background: url(../images/btn.png) left top no-repeat;
+    width: 161px;
+    height: 49px;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-left: 90px;
+}
+
+.wrapper .refresh:hover {
+    background: url(../images/btn_hover.png) left top no-repeat;
+}
+
+.wrapper .refresh:active {
+    background: url(../images/btn_press.png) left top no-repeat;
+}

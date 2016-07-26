@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>知乎日报</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/zhihu.css">
+</head>
+
+<body>
+    <div class="app-page" data-page="home">
+        <div class="app-topbar">
+            <div class="app-title"><i class="fa fa-newspaper-o"></i>知乎日报</div>
+        </div>
+        <div class="app-content">
+
+            <script type="text/x-template" id="js-story-template">
+                <li class="story app-button" data-target="detail" data-target-args='{"id":${id}}'>
+                    <div class="media media--center">
+                        <img class="media-figure" src="${image}" />
+                        <div class="media-body">
+                            <p class="media-content">${title}</p>
+                        </div>
+                    </div>
+                </li>
+            </script>
+
+            <div class="app-section-stories">
+                <ul class="app-list" id="js-story-container">
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="app-page" data-page="detail">
+        <div class="app-topbar">
+            <div class="app-button left" data-back data-autotitle></div>
+            <div class="js-story-title app-title">详情页</div>
+        </div>
+        <div class="app-content">
+            <img class="js-story-cover story-cover" />
+            <div class="js-story-content story-content"></div>
+
+            <div class="button-strip">
+                <div class="app-button green" data-target="home"><i class="fa fa-list-alt"></i>回首页</div><div class="js-comment-button app-button red" data-target="comment"><i class="fa fa-comments-o"></i>看评论</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-page" data-page="comment">
+        <div class="app-topbar">
+            <div class="app-button left" data-back data-autotitle></div>
+            <div class="app-title">查看评价</div>
+        </div>
+        <div class="app-content">
+            <script type="text/x-template" id="js-comment-template">
+                <div class="comment">
+                    <div class="media">
+                        <img class="media-figure" src="${image}" />
+                        <div class="media-body">
+                            <h3 class="media-title">${title}</h3>
+                            <p class="media-content">${content}</p>
+                        </div>
+                    </div>
+                </div>
+            </script>
+
+            <div class="app-section-stories">
+                <div id="js-comment-container">
+                </div>
+            </div>
+
+            <div class="button-strip">
+                <div class="app-button green" data-target="home"><i class="fa fa-list-alt"></i>回首页</div><div class="js-comment-button app-button red" data-back><i class="fa fa-newspaper-o"></i>看文章</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/zepto.js"></script>
+    <script src="js/app.min.js"></script>
+    <script src="js/zhihu.js"></script>
+</body>
+</html>
